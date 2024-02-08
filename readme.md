@@ -2,7 +2,7 @@
 
 ## Installation
 
-- [ ] Installation de **Symfony** :
+- [X] Installation de **Symfony** :
 
 Installation d'un symfony complet : `symfony new sftshop --version="6.4.*" --webapp`
 
@@ -10,20 +10,23 @@ Installer le certificat pour gérer le https : `symfony server:ca:install`
 
 Lancer le server web de symfony en tache de fond : `symfony serve -d` ou `symfony server:start -d`
 
-- [ ] **Installation** des **librairies** nécéssaires au projet :  
+- [X] **Installation** des **librairies** nécéssaires au projet :  
 
 `composer require --dev doctrine/doctrine-fixtures-bundle fakerphp/faker jawira/doctrine-diagram-bundle knplabs/knp-paginator-bundle`
 
-- [ ] Lancement du **serveur de base de donnée** :
+- [X] Lancement du **serveur de base de donnée** :
 
 - Créer un fichier **compose.yml** avec **une base de donnée** **mariadb** et un **client sql** **adminer**
+- Lancer les **containers dockers** : `docker-compose up -d` ou `docker compose up -d`
 
-- [ ] Connexion de **symfony** au **serveur de base de donnée** :
+- [X] Connexion de **symfony** au **serveur de base de donnée** :
 
 - Copy de **.env** en **.env.local**
 - Mise à jour du fichier **.env.local** : 
 
 `DATABASE_URL="mysql://root:root@127.0.0.1:3306/tshop?serverVersion=xx.xx.xx-MariaDB&charset=utf8mb4"`
+
+- [X] Création de la base donnée : `symfony console doctrine:database:create` ou `symfony console d:d:c`
 
 ## Gestion des utilisateurs
 
