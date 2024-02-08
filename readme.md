@@ -13,7 +13,6 @@ Dans ce **dashboard** l'**admin** pourra **ajouter,modifier,supprimer** un produ
 Le **header** de votre site web sera constitué du nom de votre boutique **TShop** qui est clickable et qui renvoie vers la homepage , il sera situé à l'extrême gauche , au centre une **navbar** qui contiendra :
 
 - un lien **catalogue** qui renvoie vers le chemin **/catalogue**
-- un lien **compte** qui renvoie vers le chemin **/compte**
 
 A l'extrême droite de votre **header** vous devez avoir :
 
