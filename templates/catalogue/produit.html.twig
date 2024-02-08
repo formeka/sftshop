@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit{% endblock %}
+
+{% block body %}
+    <h1>Produit</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ produit.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ produit.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ produit.prix }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ produit.description }}</td>
+            </tr>
+            <tr>
+                <th>Online</th>
+                <td>{{ produit.online ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>
+                {% if 'https://' in 'main ' ~ produit.image  %}
+					<p>
+                    <img src="{{ produit.image }}" alt="{{ produit.nom }}">
+                    </p>
+				{% else %}
+					<p>
+                    <img src="{{ asset('uploads/images/livres/' ~ produit.image ) }}" alt="{{ produit.nom }}">
+                    </p>
+				{% endif %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

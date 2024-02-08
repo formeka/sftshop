@@ -138,6 +138,8 @@ symfony console make:crud
 Choisir la classe Produit
 ```
 
+- [ ] Ajouter l'upload d'image pour un produit
+
 ## Firewall
 
 - [ ] Mettre à jour le **firewall** pour interdire l'accées à certaine route en fonction du **rôle** dans le fichier : **config/packages/security.yaml**
