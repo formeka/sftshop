@@ -30,9 +30,9 @@ Lancer le server web de symfony en tache de fond : `symfony serve -d` ou `symfon
 
 ## Gestion des utilisateurs
 
-- [ ] Création d'un entité **client** : `symfony console make:user`  
+- [X] Création d'un entité **client** : `symfony console make:user`  
 
-Ajout des informations d'un client : 
+- [X] Ajout des informations d'un client : 
 
 ```
 symfony console make:entity 
@@ -45,46 +45,46 @@ Choisir l'entité Client
 - Téléphone (string 255)
 ```
 
-- [ ] On effectue une **migration** :
+- [X] On effectue une **migration** :
 
 **Migration** : `symfony console doctrine:migrations:diff` ou `symfony console make:migration`
 
-**Migrate** : `symfony console doctrine:migrations:migrate`
+**Migrate** : `symfony console doctrine:migrations:migrate` ou `symfony console d:m:m`
 
 
-- [ ] Formulaire d'**inscription** : `symfony console make:registration-form`  
+- [X] Formulaire d'**inscription** : `symfony console make:registration-form`  
 
 
-- [ ] **Authentification** : `symfony console make:auth`  
+- [X] **Authentification** : `symfony console make:auth`  
 
 
 ## Création des entitées
 
-- [ ] Entité **Taille** : 
+- [X] Entité **Taille** : 
 
 ```
-symfony console make:entiy Taille
+symfony console make:entity Taille
 - valeur (string 10)
 ```
 
-- [ ] Entité **Couleur** : 
+- [X] Entité **Couleur** : 
 
 ```
-symfony console make:entiy Couleur
+symfony console make:entity Couleur
 - valeur (string 10)
 ```
 
-- [ ] Entité **MoyenPaiement** : 
+- [X] Entité **MoyenPaiement** : 
 
 ```
-symfony console make:entiy MoyenPaiement
+symfony console make:entity MoyenPaiement
 - valeur (string 10)
 ```
 
 - [ ] Entité **Produit** : 
 
 ```
-symfony console make:entiy Produit
+symfony console make:entity Produit
 
 - Nom (string 255)
 - Prix (decimal)
@@ -100,7 +100,7 @@ symfony console make:entiy Produit
 
 **Migration** : `symfony console doctrine:migrations:diff` ou `symfony console make:migration`
 
-**Migrate** : `symfony console doctrine:migrations:migrate`
+**Migrate** : `symfony console doctrine:migrations:migrate` ou `symfony console d:m:m`
 
 ## Fixtures
 
@@ -108,6 +108,14 @@ symfony console make:entiy Produit
 
 - Une fixture pour les utilisateurs (**2**) : un **client** et un **admin** `ClientFixtures.php`
 - Une fixture pour les produits (**30**) : **produit,taille,couleur,moyen de paiement** `ProduitFixtures.php`
+
+- [ ] Lancement des *fixtures* :
+
+`symfony console doctrine:fixtures:load` ou `symfony console d:f:l`
+
+Lancer les **fixtures** sans validation : `symfony console d:f:l -n`
+
+Ajouter des **fixtures** sans vider les tables : `symfony console d:f:l --append`
 
 ## Controllers
 
@@ -231,7 +239,7 @@ Vous devez créer les tables suivants :
 - Client
 - Produit
 - Taille [2XS,S,M,L,XL,2XL,3XL]
-- Couleur [Beige,Blanc,Bleu,Gris,Jaune,Kaki,Marron,Noir,Orange,Rose,Rouge,Ver,Violet]
+- Couleur [Beige,Blanc,Bleu,Gris,Jaune,Kaki,Marron,Noir,Orange,Rose,Rouge,Vert,Violet]
 - Moyen de paiement [Carte bancaire,Chèque,Virement,Prélèvement]
 
 Utiliser les **fixtures** pour :
