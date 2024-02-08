@@ -131,7 +131,7 @@ CGV : `symfony console make:controller Cgv`
 
 ## Crud
 
-- [ ] Faire un **crud** pour les produits :
+- [X] Faire un **crud** pour les produits :
 
 ```
 symfony console make:crud
