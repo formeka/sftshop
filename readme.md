@@ -78,10 +78,10 @@ symfony console make:entity Couleur
 
 ```
 symfony console make:entity MoyenPaiement
-- valeur (string 10)
+- valeur (string 20)
 ```
 
-- [ ] Entité **Produit** : 
+- [X] Entité **Produit** : 
 
 ```
 symfony console make:entity Produit
@@ -96,7 +96,7 @@ symfony console make:entity Produit
 - Moyen de paiement (relation ManyToMany avec l'entité MoyenPaiement)
 ```
 
-- [ ] On effectue une **migration** :
+- [X] On effectue une **migration** :
 
 **Migration** : `symfony console doctrine:migrations:diff` ou `symfony console make:migration`
 
@@ -104,12 +104,10 @@ symfony console make:entity Produit
 
 ## Fixtures
 
-- [ ] Création des **fixtures** : 
+- [ ] Créer une **fixture** pour les utilisateurs (**2**) : un **client** et un **admin** `ClientFixtures.php`
+- [ ] Créer une **fixture** pour les produits (**30**) : **produit,taille,couleur,moyen de paiement** `ProduitFixtures.php`
 
-- Une fixture pour les utilisateurs (**2**) : un **client** et un **admin** `ClientFixtures.php`
-- Une fixture pour les produits (**30**) : **produit,taille,couleur,moyen de paiement** `ProduitFixtures.php`
-
-- [ ] Lancement des *fixtures* :
+- [X] Lancement des **fixtures** :
 
 `symfony console doctrine:fixtures:load` ou `symfony console d:f:l`
 

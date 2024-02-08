@@ -15,7 +15,7 @@ class MoyenPaiement
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 10)]
+    #[ORM\Column(length: 20)]
     private ?string $valeur = null;
 
     #[ORM\ManyToMany(targetEntity: Produit::class, mappedBy: 'moyenpaiement')]
