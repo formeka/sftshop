@@ -104,8 +104,8 @@ symfony console make:entity Produit
 
 ## Fixtures
 
-- [ ] Créer une **fixture** pour les utilisateurs (**2**) : un **client** et un **admin** `ClientFixtures.php`
-- [ ] Créer une **fixture** pour les produits (**30**) : **produit,taille,couleur,moyen de paiement** `ProduitFixtures.php`
+- [X] Créer une **fixture** pour les utilisateurs (**2**) : un **client** et un **admin** `ClientFixtures.php`
+- [X] Créer une **fixture** pour les produits (**30**) : **produit,taille,couleur,moyen de paiement** `ProduitFixtures.php`
 
 - [X] Lancement des **fixtures** :
 
@@ -117,7 +117,7 @@ Ajouter des **fixtures** sans vider les tables : `symfony console d:f:l --append
 
 ## Controllers
 
-- [ ] Création des **controllers** :
+- [X] Création des **controllers** :
 
 Homepage : `symfony console make:controller Homepage`
 
