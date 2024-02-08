@@ -1,10 +1,168 @@
-# Installation
+# Roadmap Projet
 
-Installation des librairies nécéssaires au projet :
+## Installation
 
-`composer require --dev doctrine/doctrine-fixtures-bundle fakerphp/faker jawira/doctrine-diagram-bundle`
+- [ ] Installation de **Symfony** :
+
+Installation d'un symfony complet : `symfony new sftshop --version="6.4.*" --webapp`
+
+Installer le certificat pour gérer le https : `symfony server:ca:install`
+
+Lancer le server web de symfony en tache de fond : `symfony serve -d` ou `symfony server:start -d`
+
+- [ ] **Installation** des **librairies** nécéssaires au projet :  
+
+`composer require --dev doctrine/doctrine-fixtures-bundle fakerphp/faker jawira/doctrine-diagram-bundle knplabs/knp-paginator-bundle`
+
+- [ ] Lancement du **serveur de base de donnée** :
+
+- Créer un fichier **compose.yml** avec **une base de donnée** **mariadb** et un **client sql** **adminer**
+
+- [ ] Connexion de **symfony** au **serveur de base de donnée** :
+
+- Copy de **.env** en **.env.local**
+- Mise à jour du fichier **.env.local** : 
+
+`DATABASE_URL="mysql://root:root@127.0.0.1:3306/tshop?serverVersion=xx.xx.xx-MariaDB&charset=utf8mb4"`
+
+## Gestion des utilisateurs
+
+- [ ] Création d'un entité **client** : `symfony console make:user`  
+
+Ajout des informations d'un client : 
+
+```
+symfony console make:entity 
+Choisir l'entité Client
+
+- Nom (string 50)
+- Prénom (string 50)
+- Age (integer)
+- Adresse (string 255)
+- Téléphone (string 255)
+```
+
+- [ ] On effectue une **migration** :
+
+**Migration** : `symfony console doctrine:migrations:diff` ou `symfony console make:migration`
+
+**Migrate** : `symfony console doctrine:migrations:migrate`
 
 
+- [ ] Formulaire d'**inscription** : `symfony console make:registration-form`  
+
+
+- [ ] **Authentification** : `symfony console make:auth`  
+
+
+## Création des entitées
+
+- [ ] Entité **Taille** : 
+
+```
+symfony console make:entiy Taille
+- valeur (string 10)
+```
+
+- [ ] Entité **Couleur** : 
+
+```
+symfony console make:entiy Couleur
+- valeur (string 10)
+```
+
+- [ ] Entité **MoyenPaiement** : 
+
+```
+symfony console make:entiy MoyenPaiement
+- valeur (string 10)
+```
+
+- [ ] Entité **Produit** : 
+
+```
+symfony console make:entiy Produit
+
+- Nom (string 255)
+- Prix (decimal)
+- Description (text)
+- Online (boolean)
+- Image (string 255)
+- Couleur (relation ManyToMany avec l'entité Couleur)
+- Taille (relation ManyToMany avec l'entité Taille)
+- Moyen de paiement (relation ManyToMany avec l'entité MoyenPaiement)
+```
+
+- [ ] On effectue une **migration** :
+
+**Migration** : `symfony console doctrine:migrations:diff` ou `symfony console make:migration`
+
+**Migrate** : `symfony console doctrine:migrations:migrate`
+
+## Fixtures
+
+- [ ] Création des **fixtures** : 
+
+- Une fixture pour les utilisateurs (**2**) : un **client** et un **admin** `ClientFixtures.php`
+- Une fixture pour les produits (**30**) : **produit,taille,couleur,moyen de paiement** `ProduitFixtures.php`
+
+## Controllers
+
+- [ ] Création des **controllers** :
+
+Homepage : `symfony console make:controller Homepage`
+
+Catalogue : `symfony console make:controller Catalogue`
+
+Compte : `symfony console make:controller Compte`
+ 
+RGPD : `symfony console make:controller Rgpd`
+
+CGV : `symfony console make:controller Cgv`
+
+## Crud
+
+- [ ] Faire un **crud** pour les produits :
+
+```
+symfony console make:crud
+Choisir la classe Produit
+```
+
+## Firewall
+
+- [ ] Mettre à jour le **firewall** pour interdire l'accées à certaine route en fonction du **rôle** dans le fichier : **config/packages/security.yaml**
+
+## Templates
+
+- [ ] **Templates,CSS** :
+
+- Créer un header : `_header.html.twig`
+- Créer une navbar : `_navbar.html.twig`
+- Créer un footer : `_footer.html.twig`
+- Créer une feuille de style
+
+## Pagination
+
+- [ ] **Pagination** :
+
+Ajouter de la pagination sur les pages :
+
+- Index du crud du catalogue
+- Page Catalogue
+
+## Diagramme
+
+- [ ] **Diagramme** de la base de donnée
+
+Génerer un diagram **database.svg** : `symfony console doctrine:diagram`
+
+Déplacer **database.svg** dans un dossier `public/data`
+
+## Relecture et test
+
+- [ ] Relire code,pages,readme,roadmap
+- [ ] Test liens pages,crud
 
 ---
 
@@ -77,7 +235,7 @@ Utiliser les **fixtures** pour :
 
 - les informations d'un produit et respecter **exactement** les données de **taille,couleur et paiement**
 - créer **30** produits , faire en sorte qu'il y ai des produits **online et offline**
-- créer 2 utilisateurs via des fixtures , un client et un admin
+- créer **2** utilisateurs via des fixtures , un client et un admin
 
 ## Les pages de votre site web
 
