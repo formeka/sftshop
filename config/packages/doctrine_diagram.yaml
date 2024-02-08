@@ -2,4 +2,4 @@
 doctrine_diagram:
     size: midi
     filename: database
-    format: svg
+    format: png

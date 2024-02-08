@@ -138,11 +138,11 @@ symfony console make:crud
 Choisir la classe Produit
 ```
 
-- [ ] Ajouter l'upload d'image pour un produit
+- [X] Ajouter l'upload d'image pour un produit
 
 ## Firewall
 
-- [ ] Mettre à jour le **firewall** pour interdire l'accées à certaine route en fonction du **rôle** dans le fichier : **config/packages/security.yaml**
+- [X] Mettre à jour le **firewall** pour interdire l'accées à certaine route en fonction du **rôle** dans le fichier : **config/packages/security.yaml**
 
 ## Templates
 
@@ -154,7 +154,7 @@ Choisir la classe Produit
 
 ## Pagination
 
-- [ ] **Pagination** :
+- [X] **Pagination** :
 
 Ajouter de la pagination sur les pages :
 
@@ -163,7 +163,7 @@ Ajouter de la pagination sur les pages :
 
 ## Diagramme
 
-- [ ] **Diagramme** de la base de donnée
+- [X] **Diagramme** de la base de donnée
 
 Génerer un diagram **database.svg** : `symfony console doctrine:diagram`
 
