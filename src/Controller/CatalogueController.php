@@ -31,15 +31,15 @@ class CatalogueController extends AbstractController
         ]);
     }
 
-    #[Route('/{idProduit}', name: 'app_catalogue_produit', methods: ['GET'])]
-    public function produit(ProduitRepository $produitRepository, int $idProduit): Response
-    {
-        $produit = $produitRepository->findOneBy($idProduit);
+    // #[Route('/{idProduit}', name: 'app_catalogue_produit', methods: ['GET'])]
+    // public function produit(ProduitRepository $produitRepository, int $idProduit): Response
+    // {
+    //     $produit = $produitRepository->findOneBy($idProduit);
 
         
         
-        return $this->render('catalogue/produit.html.twig', [
-            'produit' => $produit,
-        ]);
-    }
+    //     return $this->render('catalogue/produit.html.twig', [
+    //         'produit' => $produit,
+    //     ]);
+    // }
 }
