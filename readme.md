@@ -144,12 +144,11 @@ Choisir la classe Produit
 
 ## Templates
 
-- [ ] **Templates,CSS** :
+- [X] **Templates** :
 
 - Créer un header : `_header.html.twig`
 - Créer une navbar : `_navbar.html.twig`
 - Créer un footer : `_footer.html.twig`
-- Créer une feuille de style
 
 ## Pagination
 
@@ -167,6 +166,10 @@ Ajouter de la pagination sur les pages :
 Génerer un diagram **database.svg** : `symfony console doctrine:diagram`
 
 Déplacer **database.svg** dans un dossier `public/data`
+
+## CSS
+
+- [ ] Créer une feuille de style
 
 ## Relecture et test
 
