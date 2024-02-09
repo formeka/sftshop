@@ -171,12 +171,12 @@ Déplacer **database.svg** dans un dossier `public/data`
 
 ## CSS
 
-- [ ] Créer une feuille de style
+- [X] Créer une feuille de style
 
 ## Relecture et test
 
-- [ ] Relire code,pages,readme,roadmap
-- [ ] Test liens pages,crud
+- [X] Relire code,pages,readme,roadmap
+- [X] Test liens pages,crud
 
 ---
 
