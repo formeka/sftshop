@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test api produit symfony api plateform</title>
     <style>
-        #user {
+        #produit {
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: 1rem;
-  1padding: 1rem;
 }
 
 img {
@@ -18,7 +17,7 @@ img {
 object-fit: cover;
 }
 
-.oneuser {
+.oneproduit {
   border:solid 1px black;
   height: 15rem;
   padding: 1rem;
@@ -32,23 +31,23 @@ object-fit: cover;
         fetch('https://127.0.0.1:8000/api/produits')
   .then((res) => res.json())
   .then(data=>{
-   console.dir(data);
+   //console.dir(data);
    let output = '';
      data['hydra:member'].forEach(item=>{
      output += `
-       <div class="oneuser">
+       <div class="oneproduit">
        <h4>${item.nom}</h4>
        <img src="${item.image}">
-       <h5>${item.prix}</h5>
+       <h5>${item.prix} €</h5>
        </div>
         `;
      });
-     document.getElementById("user").innerHTML = output;
+     document.getElementById("produit").innerHTML = output;
   })
   .catch((error) => {console.log(error);})
     </script>
 </head>
 <body>
-    <div id="user"></div>
+    <div id="produit"></div>
 </body>
 </html>
