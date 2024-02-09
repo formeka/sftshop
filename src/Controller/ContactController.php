@@ -30,6 +30,11 @@ class ContactController extends AbstractController
 
             $mailer->send($email);
 
+            $this->addFlash(
+                'emailContact',
+                'Votre email est bien envoyé!'
+            );
+
             return $this->redirectToRoute('app_homepage');
 
         endif;

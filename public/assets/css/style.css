@@ -75,3 +75,11 @@ footer , .pagination {
   padding: 0.8rem;
   text-align: left;
 }
+
+.flash-emailContact {
+  padding: 1rem;
+  color: brown;
+  background-color: chartreuse;
+  font-weight: bold;
+  text-align: center;
+}
