@@ -1,3 +1,63 @@
 body {
-    font-family: sans-serif;
+  font-family: sans-serif;
+  padding: 1rem;
+}
+
+.avatar {
+  width: 1.5rem;
+}
+
+a {
+  color: blue;
+}
+
+ul {
+  list-style: none;
+}
+
+header , header nav , .nav_user {
+  display: flex;
+}
+
+header  {
+  justify-content: space-between;
+  align-items: center;
+}
+  
+header nav {
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_user {
+  align-items: center;
+  gap: 1rem;
+}
+
+.catalogue {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalogue figure {
+  width: 20rem;
+}
+
+.catalogue img {
+  width: 10rem;
+}
+
+ header {
+  border-bottom: solid 1px black;
+  padding: 1rem 0;
+}
+
+footer {
+  border-top: solid 1px black;
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+
+footer , .pagination {
+  text-align: center;
 }

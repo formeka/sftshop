@@ -12,8 +12,7 @@ use App\Entity\Produit;
 
 class CatalogueController extends AbstractController
 {
-    #[Route('/catalogue')]
-    #[Route('/', name: 'app_catalogue')]
+    #[Route('/catalogue', name: 'app_catalogue')]
     public function index(
         ProduitRepository $produitRepository,
         Request $request,
@@ -31,7 +30,10 @@ class CatalogueController extends AbstractController
         ]);
     }
 
-    #[Route('/{idProduit}', name: 'app_catalogue_produit', methods: ['GET'], requirements: ['idProduit' => '\d+'])]
+    #[Route('/catalogue/{idProduit}', 
+    name: 'app_catalogue_produit', 
+    methods: ['GET'], 
+    requirements: ['idProduit' => '\d+'])]
     public function produit(ProduitRepository $produitRepository, int $idProduit): Response
     {
         $produit = $produitRepository->findOneBy(['id' => $idProduit]);

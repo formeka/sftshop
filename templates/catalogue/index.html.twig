@@ -1,36 +1,36 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<h1>Catalogue</h1>
-	<section>
-		{% for produit in produits %}
+<h1>Catalogue</h1>
+
+<section class="catalogue">
+	{% for produit in produits %}
+
 			<figure>
 				{% if 'https://' in 'main ' ~ produit.image  %}
 					<p>
 						<img src="{{ produit.image }}" alt="{{ produit.nom }}">
-                    </p>
+</p>
+
 				{% else %}
 					<p>
 <img src="{{ asset('uploads/produits/' ~ produit.image ) }}" alt="{{ produit.nom }}">
 
-                    </p>
-				{% endif %}
-				<figcaption>
-					<p>{{ produit.nom }}</p>
-					<p>
-						<strong>{{ produit.prix }}
-							€</strong>
-					</p>
-					<p>
-						<a href="{{ path('app_catalogue_produit', {'idProduit': produit.id}) }}">{{ produit.nom }}</a>
-						{# {{ produit.nom }} #}
-					</p>
-				</figcaption>
-			</figure>
+</p></p>{% endif %}<figcaption><p>{{ produit.nom }}</p><p>
+<strong>{{ produit.prix }}
+	€</strong></p><p>
+<a href="{{ path('app_catalogue_produit', {'idProduit': produit.id}) }}">{{ produit.nom }}</a></p>
 
-		{% endfor %}
-        {{ knp_pagination_render(produits) }}
-	</section>
+</p></p></figcaption></figure>
+
+
+{% endfor %}
+
+</section>
+
+
+{{ knp_pagination_render(produits) }}
+
 
 
 {% endblock %}

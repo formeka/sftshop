@@ -1,17 +1,10 @@
 <nav>
-	<ul>
-		<li>
-			<a href="{{ path('app_catalogue') }}">Catalogue</a>
-		</li>
-	</ul>
-
-	<ul>
+	<ul class="nav_user">
 		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 			<li>
 				<a href="{{ path('app_logout') }}">Déconnexion</a>
 			</li>
-<li><img src="{{ asset('assets/images/user.png') }}" alt="" class="avatar"></li>
-
+			<li><img src="{{ asset('assets/images/user.png') }}" alt="" class="avatar"></li>
 		{% else %}
 			<li>
 				<a href="{{ path('app_login') }}">Connexion</a>
@@ -26,7 +19,6 @@
 				<a href="{{ path('app_produit_index') }}">Gestion Catalogue</a>
 			</li>
 		{% endif %}
-
 	</ul>
 </nav>
 
