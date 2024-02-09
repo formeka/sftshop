@@ -34,7 +34,7 @@ class ClientFixtures extends Fixture
         ->setAge($faker->numberBetween(18,99))
         ->setAdresse($faker->address())
         ->setTelephone($faker->phoneNumber());
-        // $manager->persist($client1);
+        $manager->persist($client1);
 
         $client2 = new Client();
 
@@ -48,7 +48,7 @@ class ClientFixtures extends Fixture
         ->setAge($faker->numberBetween(18,99))
         ->setAdresse($faker->address())
         ->setTelephone($faker->phoneNumber());
-        // $manager->persist($client2);
+        $manager->persist($client2);
 
         // $manager->flush();
     }

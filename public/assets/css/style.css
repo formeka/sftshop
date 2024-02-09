@@ -61,3 +61,17 @@ footer {
 footer , .pagination {
   text-align: center;
 }
+
+.table_produit {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table_produit th {
+  text-align: left;
+}
+
+.table_produit td {
+  padding: 0.8rem;
+  text-align: left;
+}
